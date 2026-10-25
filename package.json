@@ -1,0 +1,19 @@
+{
+  "name": "rakko-cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ラッコM&Aの公開案件を取得するCLI",
+  "type": "module",
+  "bin": { "rakko": "dist/cli.js" },
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "tsc && chmod +x dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "dev": "tsx src/cli.ts",
+    "prepare": "npm run build"
+  },
+  "dependencies": { "cheerio": "^1.2.0", "commander": "^14.0.0", "zod": "^4.0.0" },
+  "devDependencies": { "@types/node": "^24.0.0", "tsx": "^4.20.0", "typescript": "^5.9.0" },
+  "license": "MIT"
+}
